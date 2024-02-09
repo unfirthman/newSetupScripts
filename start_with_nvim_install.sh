@@ -47,8 +47,39 @@ curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Ubuntu
 
 unzip UbuntuMono.zip -d ../../../usr/share/fonts/
 
+wait
+
+cd
+
+# Let's add NVIM!
+
+git clone https://github.com/neovim/neovim
+
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+
+wait
+
+sudo make install
+
+wait
+
+cd
 
 
+# Now let's add some dot files
 
+git clone https://github.com/unfirthman/dot-files
+
+wait
+
+cd dot-files && mv nvim_script ../.config/
+
+cd .config/ && mv nvim_script nvim
+
+cd
+
+# Download and install ohmyzsh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 } | tee -a ./welcomeLog.txt
