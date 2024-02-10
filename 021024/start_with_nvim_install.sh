@@ -65,11 +65,18 @@ wait
 
 cd
 
+
 # Now let's add some dot files
 
 git clone https://github.com/unfirthman/dot-files
 
 wait
+
+cd dot-files && mv nvim_script ../.config/
+
+cd .config/ && mv nvim_script nvim
+
+cd
 
 # Download and install ohmyzsh
 
