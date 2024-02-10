@@ -1,3 +1,9 @@
+
+`sudo chmod o+x new_setup_xxxxx.sh`
+
+`sudo sh -x new_setup_xxxxx.sh`
+
+
 So you need to set up a new ubuntu dev environment.
 
 
