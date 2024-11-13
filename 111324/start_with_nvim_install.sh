@@ -51,9 +51,32 @@ wait
 
 cd
 
+# Let's add NVIM!
+
+git clone https://github.com/neovim/neovim
+
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+
+wait
+
+sudo make install
+
+wait
+
+cd
+
 
 # Now let's add some dot files
-### This space was previously used to install nvim config directory
+
+git clone https://github.com/unfirthman/dot-files
+
+wait
+
+cd dot-files && mv nvim_script ../.config/
+
+cd .config/ && mv nvim_script nvim
+
+cd
 
 # Download and install ohmyzsh
 
